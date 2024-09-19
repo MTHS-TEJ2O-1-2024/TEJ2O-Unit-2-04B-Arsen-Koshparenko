@@ -7,12 +7,10 @@
 
 //basic.showString('Hello, World!')
 basic.clearScreen()
-let celsius
-basic.pause(1000)
+basic.showIcon(IconNames.Happy)
+let temp = 0
 
-let temperature = 25 
-input.onButtonPressed(Button.A,function(){
-    input.temperature()
-    basic.showString(" The temperature is")
-    basic.showNumber(temperature)
+input.onButtonPressed(Button.A, function () {
+    temp = input.temperature()
+    basic.showString("The temperature is:" + (temp).toString())
 })
